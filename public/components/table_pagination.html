@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/font/icomoon/style.css">
+    <link rel="stylesheet" href="../dist/font/icony/dist/css/style.css">
+    <link rel="stylesheet" href="../dist/style.css">
+    <title>Table pagination</title>
+</head>
+<body class="bg-blue-100 font-sans">
+    <div class="min-h-screen flex flex-col justify-between">
+        <!-- pagination start -->
+        <div class="p-4 flex items-center justify-between">
+            <div class="text-gray-600">
+                Show <select name="" class="bg-blue-200 py-2 px-3 rounded-md" id="">
+                    <option value="">10</option>
+                </select>
+            </div>
+            <div class="flex justify-around items-center px-3">
+                <a href="#" class="paginate paginate--disabled text-2xl">
+                    <i class="iconly-Arrow-Left-2 icli"></i>
+                </a>
+                <a href="#" class="paginate paginate--active">
+                    1
+                </a>
+                <a href="#" class="paginate">
+                    2
+                </a>
+                <a href="#" class="paginate">
+                    3
+                </a>
+                <a href="#" class="paginate">
+                    4
+                </a>
+                <a href="#" class="paginate paginate--disabled text-2xl">
+                    <i class="iconly-Arrow-Right-2 icli"></i>
+                </a>
+            </div>
+            <!-- result start -->
+            <div class="text-gray-400">
+                10 of 14 results
+            </div>
+            <!-- result end -->
+        </div>
+        <!--pagination end-->
+    </div>
+</body>
+</html>

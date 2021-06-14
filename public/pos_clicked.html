@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/font/icomoon/style.css">
+    <link rel="stylesheet" href="./dist/font/icony/dist/css/style.css">
+    <link rel="stylesheet" href="./dist/style.css">
+    <title>POS</title>
+</head>
+
+<body class="bg-blue-100 font-sans">
+    <!--Modal Start-->
+    <!-- modal background start -->
+    <div class="modal-background">
+        <div class="modal">
+            <div class="modal-head">
+                <h6 class="text-lg font-bold text-blue-500">Complete Payment</h6>
+                <button id="close_modal" class="text-xl text-gray-500 hover:text-red-500">
+                    <i class="iconly-Close-Square icbo"></i>
+                </button>
+            </div>
+            <div class="modal-body text-gray-600">
+                <div class="flex items-center justify-between py-3 border-b-2">
+                    <span class="text-sm">Total Amount</span>
+                    <span class="font-bold">$ 1,128</span>
+                </div>
+                <div class="flex items-center py-3">
+                    <div class="inline-flex items-center mr-5">
+                        <label class="custom-checkbox mr-3" for="credit-card">
+                            <input type="checkbox" name="" id="credit-card">
+                            <span></span>
+                        </label>
+                        <label for="credit-card" class="w-24 text-sm capitalize font-bold">Credit card</label>
+                    </div>
+                    <div class="inline-flex items-center">
+                        <label class="custom-checkbox mr-3" for="cash">
+                            <input type="checkbox" name="" id="cash">
+                            <span></span>
+                        </label>
+                        <label for="cash" class="w-24 text-sm capitalize font-bold">Cash</label>
+                    </div>
+                </div>
+                <div class="my-3 flex justify-between items-center">
+                    <button
+                        class="rounded-md bg-blue-600 text-white px-5 py-3 font-bold flex items-center hover:bg-blue-800">
+                        Complete payment
+                    </button>
+                    <button
+                        class="rounded-md border-2 border-blue-600 text-blue-600  px-5 py-3 font-bold flex items-center hover:border-blue-800 hover:text-blue-800 ">
+                        Print Invoice
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal background end -->
+    <!-- Modal End -->
+    <div class="min-h-screen flex items-start bg-blue-100">
+        <!-- sidebar start -->
+        <aside class="sidebar">
+            <button class="block w-10 mb-7 menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="flex-col items-center p-3 w-full">
+                <li class="w-full block">
+                    <a href="#" class="sidebar-link">
+                        <span class="text-3xl">
+                            <i class="iconly-Category"></i>
+                        </span>
+                        <span class="inline-block mt-1 title">Home</span>
+                    </a>
+                </li>
+                <li class="w-full block">
+                    <a href="#" class="sidebar-link">
+                        <span class="text-3xl">
+                            <i class="iconly-Chart icli"></i>
+                        </span>
+                        <span class="inline-block mt-1 title">Reports</span>
+                    </a>
+                </li>
+                <li class="w-full block">
+                    <a href="#" class="sidebar-link">
+                        <span class="text-3xl">
+                            <i class="iconly-Calendar icli"></i>
+                        </span>
+                        <span class="inline-block mt-1 title">Calender</span>
+                    </a>
+                </li>
+                <li class="w-full block">
+                    <a href="#" class="sidebar-link">
+                        <span class="text-3xl">
+                            <i class="iconly-Time-Square icli"></i>
+                        </span>
+                        <span class="inline-block mt-1 title">Reception</span>
+                    </a>
+                </li>
+                <li class="w-full block">
+                    <a href="#" class="sidebar-link">
+                        <span class="text-3xl">
+                            <i class="iconly-User3 icli"></i>
+                        </span>
+                        <span class="inline-block mt-1 title">Staff</span>
+                    </a>
+                </li>
+                <li class="w-full block">
+                    <a href="#" data-target="marketing" class="sidebar-dropdown">
+                        <span class="text-3xl">
+                            <i class="iconly-Discount icli"></i>
+                        </span>
+                        <span class="inline-block mt-1 title">Marketing</span>
+                        <span class="indicator">
+                            <i class="iconly-Arrow-Down-2 icli"></i>
+                        </span>
+                    </a>
+                    <ul class="sublink show" id="marketing">
+                        <li>
+                            <a href="#">SMS Campaign</a>
+                        </li>
+                        <li>
+                            <a href="#">E-Mail Campaign</a>
+                        </li>
+                        <li>
+                            <a href="#">Surveys</a>
+                        </li>
+                        <li>
+                            <a href="#">Automatic remainders</a>
+                        </li>
+                        <li>
+                            <a href="#">Referrals</a>
+                        </li>
+                        <li>
+                            <a href="#">Affiliates</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="w-full block">
+                    <a href="#" class="sidebar-link">
+                        <span class="text-3xl">
+                            <i class="iconly-Graph icli"></i>
+                        </span>
+                        <span class="inline-block mt-1 title">Sales</span>
+                    </a>
+                </li>
+                <li class="w-full block">
+                    <a href="#" class="sidebar-link">
+                        <span class="text-3xl">
+                            <i class="iconly-Activity icli"></i>
+                        </span>
+                        <span class="inline-block mt-1 title">Stock</span>
+                    </a>
+                </li>
+                <li class="w-full block">
+                    <a href="#" data-target="finance" class="sidebar-dropdown">
+                        <span class="text-3xl">
+                            <i class="iconly-Document icli"></i>
+                        </span>
+                        <span class="inline-block mt-1 title">Finance</span>
+                        <span class="indicator">
+                            <i class="iconly-Arrow-Down-2 icli"></i>
+                        </span>
+                    </a>
+                    <ul class="sublink show" id='finance'>
+                        <li>
+                            <a href="#">POS</a>
+                        </li>
+                        <li>
+                            <a href="#">Expenses</a>
+                        </li>
+                        <li>
+                            <a href="#">Invoices</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="w-full block">
+                    <a href="#" data-target="client" class="sidebar-dropdown">
+                        <span class="text-3xl">
+                            <i class="iconly-Work icli"></i>
+                        </span>
+                        <span class="inline-block mt-1 title">Clients</span>
+                        <span class="indicator">
+                            <i class="iconly-Arrow-Down-2 icli"></i>
+                        </span>
+                    </a>
+                    <ul class="sublink show" id="client">
+                        <li>
+                            <a href="#">Leads</a>
+                        </li>
+                        <li>
+                            <a href="#">Clients</a>
+                        </li>
+                        <li>
+                            <a href="#">Lead Form</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="w-full block">
+                    <a href="#" data-target="more" class="sidebar-dropdown">
+                        <span class="text-2xl">
+                            <i class="iconly-More-Square icli"></i>
+                        </span>
+                        <span class="inline-block mt-1 title">More</span>
+                        <span class="indicator">
+                            <i class="iconly-Arrow-Down-2 icli"></i>
+                        </span>
+                    </a>
+                    <ul class="sublink show" id="more">
+                        <li>
+                            <a href="#">Notes</a>
+                        </li>
+                        <li>
+                            <a href="#">Documents</a>
+                        </li>
+                        <li>
+                            <a href="#">Tags</a>
+                        </li>
+                        <li>
+                            <a href="#">Forms</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="w-full block">
+                    <a href="#" class="sidebar-link">
+                        <span class="text-3xl">
+                            <span class="icon-tooth_2"></span>
+                        </span>
+                        <span class="inline-block mt-1 title">Teeth Charts</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <!-- sidebar end -->
+        <!-- main start -->
+        <main class="flex-grow">
+            <!-- navbar start -->
+            <nav
+                class="flex justify-end sticky z-30 top-0 items-center bg-white border-b border-blue-100 py-4 px-4 shadow-lg">
+                <div class="flex items-center mr-auto text-lg">
+                    <!-- logo start -->
+                    <img src="./dist/img/Sellsio_logo.svg" alt="selsio logo" class="w-12 h-auto">
+                    <!-- logo end -->
+                    <span class="inline-block ml-3 font-bold text-blue-600">Point of Sale</span>
+                </div>
+                <div class=" w-60">
+                    <input placeholder="Search" type="search" name=""
+                        class="rounded-md inline-block w-full bg-blue-100 h-10 p-3 placeholder-gray-600" id="">
+                </div>
+                <button class="notification-bell active ml-4">
+                    <i class="iconly-Notification icli"></i>
+                </button>
+                <button
+                    class="rounded-md p-1 ml-4 text-white font-bold bg-blue-600 hover:bg-blue-700 text-md border-2 border-blue-900 flex items-center">
+                    <span class="icon-plus mr-2"></span>
+                    <span class="hidden lg:inline-block">Create a new...</span>
+                    <span class="inline-block lg:hidden">New</span>
+                    <span class="block rounded-r-md px-1 text-blue-700 bg-blue-300 ml-2">
+                        <i class="iconly-Arrow-Down-2 icli"></i>
+                    </span>
+                </button>
+                <span class="text-sm hidden lg:inline-block text-blue-600 font-bold ml-4">Richard Peck</span>
+                <span class="inline-block ml-4">
+                    <img src="https://wallpaperaccess.com/full/2213424.jpg" class="avatar" alt="Profile image">
+                </span>
+            </nav>
+            <!-- navbar end -->
+            <div class="flex items-center px-4 py-3 bg-blue-200">
+                <label class="inline-block dropdown" tabindex="0" for="customer_dropdown_1">
+                    <div class="w-96 text-sm rounded-lg cursor-pointer  border-gray-400 border-2 p-3 py-2 flex justify-between items-center bg-white text-gray-600">
+                        <span>Customer</span> 
+                        <i class="iconly-Arrow-Down-2 icli"></i>
+                    </div>
+                    <input type="checkbox" name="" class="hidden" id="customer_dropdown_1">
+                    <div class="dropdown-options left w-full">
+                        <div class="border-b-2 flex justify-between items-center py-2">
+                            <span class="text-blue-500 font-bold text-sm">Customers</span>
+                            <label tabindex="1" class="inline text-gray-600 hover:text-red-500 cursor-pointer text-xl" for="customer_dropdown_1">
+                                <i class="iconly-Close-Square icbo"></i>
+                            </label>
+                        </div>
+                        <div class="w-full my-2">
+                            <input type="search" placeholder="Search for a customer" class="form-input" name="" id="">
+                        </div>
+                        <ul class=" max-h-72 text-gray-600 overflow-y-auto">
+                            <li>
+                                <a href="" class="inline-block w-full py-2 hover:text-blue-600">Izzy Dunlop</a>
+                            </li>
+                            <li>
+                                <a href="" class="inline-block w-full py-2 hover:text-blue-600">Nela</a>
+                            </li>
+                            <li>
+                                <a href="" class="inline-block w-full py-2 hover:text-blue-600">Sachin Vaughn</a>
+                            </li>
+                            <li>
+                                <a href="" class="inline-block w-full py-2 hover:text-blue-600">Inaya Rankin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+            <section class="p-4 flex relative min-h-screen">
+                <button id="category_button"
+                    class="absolute right-0 z-10 top-0 h-full rounded-l-lg flex flex-col text-bold justify-center bg-blue-800 px-1 text-white hover:bg-blue-900">
+                    <span style="writing-mode: vertical-rl;"
+                        class="transform inline-block text-sm -rotate-180">Categories</span>
+                </button>
+                <div id="category_sidebar"
+                    class="z-20 bg-white h-full hidden overflow-y-auto p-2 px-3 w-60 absolute top-0 right-0 rounded-l-md border-2 border-blue-200 shadow-md">
+                    <div class="flex text-gray-600 justify-between items-center border-b-2 py-2">
+                        <h3 class="font-bold">Category</h3>
+                        <button id="close_category_sidebar" class=" px-2 py-1 rounded-md bg-green-400 hover:bg-green-500 text-white">
+                            <i class="iconly-Arrow-Right-2 icli"></i>
+                        </button>
+                    </div>
+                    <ul class="text-gray-600 font-bold w-full">
+                        <li class="py-3 w-full">
+                            <a href="" class="hover:text-blue-500">Face pills</a>
+                        </li>
+                        <li class="py-3 w-full">
+                            <a href="" class="hover:text-blue-500">Beauty</a>
+                        </li>
+                        <li class="py-3 w-full">
+                            <label tabindex="0"
+                                class="hover:text-blue-500 cursor-pointer flex justify-between items-center">
+                                Men products
+                                <i class="iconly-Arrow-Down-2 icli"></i>
+                            </label>
+                        </li>
+                        <li class="py-3 w-full">
+                            <a href="" class="hover:text-blue-500">Beard oil</a>
+                        </li>
+                        <li class="py-3 w-full">
+                            <a href="" class="hover:text-blue-500">Beard Shampoo</a>
+                        </li>
+                        <li class="py-3 w-full">
+                            <label tabindex="0"
+                                class="hover:text-blue-500 cursor-pointer flex justify-between items-center">
+                                Aestetics
+                                <i class="iconly-Arrow-Down-2 icli"></i>
+                            </label>
+                        </li>
+                        <li class="py-3 w-full">
+                            <a href="" class="hover:text-blue-500">Skin Care</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/2 flex flex-col justify-between min-h-screen bg-white mr-5">
+                    <div class="mb-4 p-4">
+                        <div class="flex py-3 border-b-2 text-gray-500">
+                            <img src="./dist/img/products/skin_care.png" class="object-cover object-center w-12 h-12 rounded-xl ring-2 ring-blue-200 mr-4" alt="">
+                            <div class="mr-2 w-4/12">
+                                <span class="text-sm block mb-1" >
+                                    Dental implants (this product name could have 2 rows)
+                                </span>
+                                <span class="text-lg font-bold">$ 18</span>
+                            </div>
+                            <div class="ml-auto w-6/12">
+                                <div class="flex items-center justify-end">
+                                    <div class="flex items-center text-sm justify-center mr-3">
+                                        <span class="mr-2">Discount</span>
+                                        <div class="w-14 mr-2">
+                                            <input type="number" value="10" class="form-input text-sm">
+                                        </div>
+                                        <span class="mr-2">%</span>
+                                    </div>
+                                    <button class="text-xl w-4 h-4 flex items-center justify-center mb-1 rounded-sm bg-red-400 hover:bg-red-500 mr-2">
+                                        <span class=" border-b-2 border-white w-4/6"></span>
+                                    </button>
+                                    <div class="w-10 mr-2">
+                                        <input type="number" value="10" class="form-input text-sm">
+                                    </div>
+                                    <button class="text-xl text-green-400 hover:text-green-500 mr-2">
+                                        <i class="iconly-Plus icbo"></i>
+                                    </button>
+                                    <button class="text-xl hover:text-red-500">
+                                        <i class="iconly-Delete icli"></i>
+                                    </button>
+                                </div>
+                                <div class="text-right mt-2">
+                                    Total Cost <span class="font-bold">$ 450</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex py-3 border-b-2 text-gray-500">
+                            <img src="./dist/img/products/skin_care.png" class="object-cover object-center w-12 h-12 rounded-xl ring-2 ring-blue-200 mr-4" alt="">
+                            <div class="mr-2 w-4/12">
+                                <span class="text-sm block mb-1" >
+                                    Dental implants (this product name could have 2 rows)
+                                </span>
+                                <span class="text-lg font-bold">$ 18</span>
+                            </div>
+                            <div class="ml-auto w-6/12">
+                                <div class="flex items-center justify-end">
+                                    <div class="flex items-center text-sm justify-center mr-3">
+                                        <span class="mr-2">Discount</span>
+                                        <div class="w-14 mr-2">
+                                            <input type="number" value="10" class="form-input text-sm">
+                                        </div>
+                                        <span class="mr-2">%</span>
+                                    </div>
+                                    <button class="text-xl w-4 h-4 flex items-center justify-center mb-1 rounded-sm bg-red-400 hover:bg-red-500 mr-2">
+                                        <span class=" border-b-2 border-white w-4/6"></span>
+                                    </button>
+                                    <div class="w-10 mr-2">
+                                        <input type="number" value="10" class="form-input text-sm">
+                                    </div>
+                                    <button class="text-xl text-green-400 hover:text-green-500 mr-2">
+                                        <i class="iconly-Plus icbo"></i>
+                                    </button>
+                                    <button class="text-xl hover:text-red-500">
+                                        <i class="iconly-Delete icli"></i>
+                                    </button>
+                                </div>
+                                <div class="text-right mt-2">
+                                    Total Cost <span class="font-bold">$ 450</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex py-3 border-b-2 text-gray-500">
+                            <figure class="bg-blue-200 w-12 text-blue-800 flex items-center justify-center text-xl h-12 rounded-xl ring-2 ring-blue-200 mr-4">
+                                <i class="iconly-Image icbo"></i>
+                            </figure>
+                            <div class="mr-2 w-4/12">
+                                <span class="text-sm block mb-1" >
+                                    Dental implants (this product name could have 2 rows)
+                                </span>
+                                <span class="text-lg font-bold">$ 18</span>
+                            </div>
+                            <div class="ml-auto w-6/12">
+                                <div class="flex items-center justify-end">
+                                    <div class="flex items-center text-sm justify-center mr-3">
+                                        <span class="mr-2">Discount</span>
+                                        <div class="w-14 mr-2">
+                                            <input type="number" value="10" class="form-input text-sm">
+                                        </div>
+                                        <span class="mr-2">%</span>
+                                    </div>
+                                    <button class="text-xl w-4 h-4 flex items-center justify-center mb-1 rounded-sm bg-red-400 hover:bg-red-500 mr-2">
+                                        <span class=" border-b-2 border-white w-4/6"></span>
+                                    </button>
+                                    <div class="w-10 mr-2">
+                                        <input type="number" value="10" class="form-input text-sm">
+                                    </div>
+                                    <button class="text-xl text-green-400 hover:text-green-500 mr-2">
+                                        <i class="iconly-Plus icbo"></i>
+                                    </button>
+                                    <button class="text-xl hover:text-red-500">
+                                        <i class="iconly-Delete icli"></i>
+                                    </button>
+                                </div>
+                                <div class="text-right mt-2">
+                                    Total Cost <span class="font-bold">$ 450</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 text-gray-600 mt-auto">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm">Subtotal: 73 items</span>
+                            <span class="font-bold">$ 1,180</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm">Total discount</span>
+                            <span class="font-bold">$ 46</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm">Total cost</span>
+                            <span class="font-bold">$ 1,142</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button
+                                class="rounded-md bg-green-400 text-white w-1/2 px-4 py-2 font-bold justify-center flex items-center hover:bg-green-600 mr-2">
+                                <span>Proceed to payment</span>
+                            </button>
+                            <button class="rounded-md bg-transparent  border-2 w-1/2 hover:border-blue-700 justify-center hover:text-blue-700 border-blue-500 text-blue-500 px-4 py-2 font-bold flex items-center">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/2 grid grid-cols-3 gap-4">
+                    <a href="#"
+                        class="block border-2 border-transparent hover:border-blue-300 hover:shadow-md rounded-lg h-60 overflow-hidden bg-white pos-product">
+                        <div class="h-3/5 bg-blue-200">
+                            <div class="w-full h-full flex justify-center text-5xl text-blue-700 items-center">
+                                <i class="iconly-Image-2 icbo"></i>
+                            </div>
+                        </div>
+                        <div class="h-2/5 flex flex-col justify-between p-3">
+                            <p class="text-xs text-gray-600">Name of this product with 2 rows in it</p>
+                            <div class="w-full flex justify-between items-center">
+                                <span class="text-sm font-bold text-gray-600">$ 80</span>
+                                <span class="text-xs text-gray-600">Stock: 30</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="block border-2 border-transparent hover:border-blue-300 hover:shadow-md rounded-lg h-60 overflow-hidden bg-white pos-product">
+                        <div class="h-3/5 bg-blue-200">
+                            <img class=" w-full h-full object-cover object-center" src="./dist/img/products/fruits.png"
+                                alt="">
+                        </div>
+                        <div class="h-2/5 flex flex-col justify-between p-3">
+                            <p class="text-xs text-gray-600">Tenis racket Willson</p>
+                            <div class="w-full flex justify-between items-center">
+                                <span class="text-sm font-bold text-gray-600">$ 80</span>
+                                <span class="text-xs text-gray-600">Stock: 30</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="block border-2 border-transparent hover:border-blue-300 hover:shadow-md rounded-lg h-60 overflow-hidden bg-white pos-product">
+                        <div class="h-3/5 bg-blue-200">
+                            <div class="w-full h-full flex justify-center text-5xl text-blue-700 items-center">
+                                <i class="iconly-Image-2 icbo"></i>
+                            </div>
+                        </div>
+                        <div class="h-2/5 flex flex-col justify-between p-3">
+                            <p class="text-xs text-gray-600">Name of this product with 2 rows in it</p>
+                            <div class="w-full flex justify-between items-center">
+                                <span class="text-sm font-bold text-gray-600">$ 80</span>
+                                <span class="text-xs text-gray-600">Stock: 30</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="block border-2 border-transparent hover:border-blue-300 hover:shadow-md rounded-lg h-60 overflow-hidden bg-white pos-product">
+                        <div class="h-3/5 bg-blue-200">
+                            <img class=" w-full h-full object-cover object-center"
+                                src="./dist/img/products/skin_care.png" alt="">
+                        </div>
+                        <div class="h-2/5 flex flex-col justify-between p-3">
+                            <p class="text-xs text-gray-600">Skin Care L’Oreal Paris</p>
+                            <div class="w-full flex justify-between items-center">
+                                <span class="text-sm font-bold text-gray-600">$ 40</span>
+                                <span class="text-xs text-gray-600">Stock: 14</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="block border-2 border-transparent hover:border-blue-300 hover:shadow-md rounded-lg h-60 overflow-hidden bg-white pos-product">
+                        <div class="h-3/5 bg-blue-200">
+                            <div class="w-full h-full flex justify-center text-5xl text-blue-700 items-center">
+                                <i class="iconly-Image-2 icbo"></i>
+                            </div>
+                        </div>
+                        <div class="h-2/5 flex flex-col justify-between p-3">
+                            <p class="text-xs text-gray-600">Name of this product with 2 rows in it</p>
+                            <div class="w-full flex justify-between items-center">
+                                <span class="text-sm font-bold text-gray-600">$ 80</span>
+                                <span class="text-xs text-gray-600">Stock: 30</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="block border-2 border-transparent hover:border-blue-300 hover:shadow-md rounded-lg h-60 overflow-hidden bg-white pos-product">
+                        <div class="h-3/5 bg-blue-200">
+                            <img class=" w-full h-full object-cover object-center"
+                                src="./dist/img/products/teeth_brushes.png" alt="">
+                        </div>
+                        <div class="h-2/5 flex flex-col justify-between p-3">
+                            <p class="text-xs text-gray-600">Teeth brushes</p>
+                            <div class="w-full flex justify-between items-center">
+                                <span class="text-sm font-bold text-gray-600">$ 80</span>
+                                <span class="text-xs text-gray-600">Stock: 30</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="block border-2 border-transparent hover:border-blue-300 hover:shadow-md rounded-lg h-60 overflow-hidden bg-white pos-product">
+                        <div class="h-3/5 bg-blue-200">
+                            <div class="w-full h-full flex justify-center text-5xl text-blue-700 items-center">
+                                <i class="iconly-Image-2 icbo"></i>
+                            </div>
+                        </div>
+                        <div class="h-2/5 flex flex-col justify-between p-3">
+                            <p class="text-xs text-gray-600">Name of this product with 2 rows in it</p>
+                            <div class="w-full flex justify-between items-center">
+                                <span class="text-sm font-bold text-gray-600">$ 80</span>
+                                <span class="text-xs text-gray-600">Stock: 30</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="block border-2 border-transparent hover:border-blue-300 hover:shadow-md rounded-lg h-60 overflow-hidden bg-white pos-product">
+                        <div class="h-3/5 bg-blue-200">
+                            <img class=" w-full h-full object-cover object-center"
+                                src="./dist/img/products/two_rows.png" alt="">
+                        </div>
+                        <div class="h-2/5 flex flex-col justify-between p-3">
+                            <p class="text-xs text-gray-600">Name of this product with
+                                2 rows in it</p>
+                            <div class="w-full flex justify-between items-center">
+                                <span class="text-sm font-bold text-gray-600">$ 80</span>
+                                <span class="text-xs text-gray-600">Stock: 30</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="block border-2 border-transparent hover:border-blue-300 hover:shadow-md rounded-lg h-60 overflow-hidden bg-white pos-product">
+                        <div class="h-3/5 bg-blue-200">
+                            <div class="w-full h-full flex justify-center text-5xl text-blue-700 items-center">
+                                <i class="iconly-Image-2 icbo"></i>
+                            </div>
+                        </div>
+                        <div class="h-2/5 flex flex-col justify-between p-3">
+                            <p class="text-xs text-gray-600">Name of this product with 2 rows in it</p>
+                            <div class="w-full flex justify-between items-center">
+                                <span class="text-sm font-bold text-gray-600">$ 80</span>
+                                <span class="text-xs text-gray-600">Stock: 30</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="block border-2 border-transparent hover:border-blue-300 hover:shadow-md rounded-lg h-60 overflow-hidden bg-white pos-product">
+                        <div class="h-3/5 bg-blue-200">
+                            <img class=" w-full h-full object-cover object-center" src="./dist/img/products/fruits.png"
+                                alt="">
+                        </div>
+                        <div class="h-2/5 flex flex-col justify-between p-3">
+                            <p class="text-xs text-gray-600">Tenis racket Willson</p>
+                            <div class="w-full flex justify-between items-center">
+                                <span class="text-sm font-bold text-gray-600">$ 80</span>
+                                <span class="text-xs text-red-600">Out of stock</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <!-- main end -->
+    </div>
+    <script src="./dist/js/app.js"></script>
+</body>
+
+</html>

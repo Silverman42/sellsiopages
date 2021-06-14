@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/font/icomoon/style.css">
+    <link rel="stylesheet" href="../dist/font/icony/dist/css/style.css">
+    <link rel="stylesheet" href="../dist/style.css">
+    <title>Dropdown (Floating)</title>
+</head>
+
+<body class="bg-blue-100 font-sans">
+    <div class=" mx-auto max-w-lg">
+        <!-- dropdown start -->
+        <label for="sub_category_1" class="text-gray-600 mb-2 text-sm font-bold">Tags</label>
+        <label class="block dropdown" tabindex="0" for="tags_1">
+            <div
+                class="w-full text-xs rounded-lg cursor-pointer bg-white  border-gray-200 h-9 border-2 p-3 py-2 flex justify-between items-center  text-gray-600">
+                <span></span>
+                <i class="iconly-Arrow-Down-2 icli"></i>
+            </div>
+            <input type="checkbox" name="" class="hidden" id="tags_1">
+            <div class="dropdown-options left w-full">
+                <!-- categories start -->
+                <div id="dropdown_subcatgory_list" class="w-full">
+                    <div class="border-b-2 flex justify-between items-center py-2">
+                        <span class="text-blue-500 font-bold text-sm">Tags</span>
+                        <label tabindex="1" class="inline text-gray-600 hover:text-red-500 cursor-pointer text-xl"
+                            for="tags_1">
+                            <i class="iconly-Close-Square icbo"></i>
+                        </label>
+                    </div>
+                    <div class="flex justify-end items-center py-2">
+                        <button id="new_category_btn" class="text-blue-500 flex items-center hover:text-blue-700">
+                            <i class="iconly-Plus icli text-xl"></i>
+                            <span class="ml-3">Add new tags</span>
+                        </button>
+                    </div>
+                    <div class="w-full my-2">
+                        <input type="search" placeholder="Search for a customer" class="form-input" name="" id="">
+                    </div>
+                    <ul class="text-gray-600">
+                        <li>
+                            <button class="w-full text-left block hover:text-blue-500 font-bold py-2">
+                                2020's
+                            </button>
+                        </li>
+                        <li>
+                            <button class="w-full text-left block hover:text-blue-500 font-bold py-2">
+                                2019's
+                            </button>
+                        </li>
+                        <li>
+                            <button class="w-full text-left block hover:text-blue-500 font-bold py-2">
+                                Lots of stuffs
+                            </button>
+                        </li>
+                        <li>
+                            <button class="w-full text-left block hover:text-blue-500 font-bold py-2">
+                                Shifts
+                            </button>
+                        </li>
+                        <li>
+                            <button class="w-full text-left block hover:text-blue-500 font-bold py-2">
+                                Working hours
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- categories end -->
+                <!-- add new category start -->
+                <div id="dropdown_new_catgory">
+                    <div class="border-b-2 flex justify-between items-center py-2">
+                        <span class="text-blue-500 font-bold text-sm">Tag</span>
+                        <label tabindex="1" class="inline text-gray-600 hover:text-red-500 cursor-pointer text-xl"
+                            for="tags_1">
+                            <i class="iconly-Close-Square icbo"></i>
+                        </label>
+                    </div>
+                    <div class="w-full my-2">
+                        <input type="text" placeholder="Enter tag name" class="form-input" name="" id="">
+                    </div>
+                </div>
+                <!-- add new category end -->
+            </div>
+        </label>
+        <!-- dropdown end -->
+    </div>
+</body>
+
+</html>
