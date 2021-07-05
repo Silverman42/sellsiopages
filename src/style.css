@@ -41,6 +41,18 @@
     @apply w-10 h-10 object-cover rounded-2xl ring-2 ring-blue-500 ring-opacity-50;
 }
 
+.avatar-sm{
+    @apply w-20 h-20;
+}
+
+.avatar-md{
+    @apply w-32 h-32;
+}
+
+.avatar-lg{
+    @apply w-52 h-52;
+}
+
 .avatar--placeholder{
     @apply w-10 h-10 text-white bg-blue-700 flex items-center justify-center uppercase rounded-2xl ring-2 ring-blue-500 ring-opacity-50;
 }
@@ -106,7 +118,8 @@
     @apply ml-3 mb-2 text-lg;
 }
 
-.sidebar.open .sidebar-dropdown .indicator{
+.sidebar.open .sidebar-
+ .indicator{
     @apply ml-auto block text-lg;
 }
 
@@ -174,6 +187,10 @@
 
 .modal{
     @apply max-w-3xl mx-auto mt-10 bg-white rounded-lg border-2 border-blue-200 mb-32;
+}
+
+.modal-lg{
+    @apply w-full mx-auto mt-1 rounded-lg border-2 border-blue-200 mb-32;
 }
 
 .modal-head{
@@ -344,4 +361,22 @@
     line-height: 25px;
     left: 42%;
     @apply text-center rounded-full bg-blue-500 shadow-lg -bottom-3 absolute text-white
+}
+
+/* Tabs */
+.tab-container{
+    @apply flex items-center px-3
+}
+.tab.active{
+    @apply py-3 inline-block font-bold capitalize border-b-4 border-blue-500 text-blue-500 
+}
+.tab.active:hover{
+    @apply text-blue-700
+}
+.tab{
+    @apply py-3 inline-block border-b-4 border-transparent text-gray-500 font-bold
+}
+
+.tab:hover{
+    @apply text-blue-700
 }

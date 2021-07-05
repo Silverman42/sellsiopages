@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/font/icomoon/style.css">
+    <link rel="stylesheet" href="../dist/font/icony/dist/css/style.css">
+    <link rel="stylesheet" href="../dist/style.css">
+    <title>Client form card</title>
+</head>
+
+<body class="bg-blue-100 font-sans">
+    <!-- client form card start -->
+    <div class="p-2 border-2 relative rounded-md bg-blue-100 border-blue-200">
+        <div class="flex mb-2 item-center justify-between w-11/12">
+            <span class="text-gray-400 font-bold text-sm">Questionnaire</span>
+            <span class="text-gray-400 font-bold text-sm">23 Apr, 2021</span>
+        </div>
+        <div class="w-11/12">
+            <p class="text-sm font-bold text-gray-600 mb-2">
+                This is a name of this one form. Also,
+                here, should be able to present 2 rows
+            </p>
+            <p class="text-sm font-bold text-gray-400 mb-2">
+                This is the content of this form. Here we can have maximum three rows. This is the text
+                to fill this gap.
+            </p>
+        </div>
+        <button class="text-blue-600 absolute inline-block right-1 bottom-1 hover:text-blue-700">
+            <span class="icon-bar_code"></span>
+        </button>
+        <!-- options start -->
+        <div class="absolute right-2 top-2">
+            <label class="block dropdown cursor-pointer" tabindex="0" for="tags_3">
+                <div class="flex flex-col p-2">
+                    <span class=" w-1 h-1 rounded-full bg-blue-500 block mb-1"></span>
+                    <span class=" w-1 h-1 rounded-full bg-blue-500 block mb-1"></span>
+                    <span class=" w-1 h-1 rounded-full bg-blue-500 block mb-1"></span>
+                </div>
+                <input type="checkbox" name="" class="hidden" id="tags_3">
+                <div class="dropdown-options right w-40 p-2">
+                    <a href="#" class="flex items-center mb-2 text-gray-600 hover:text-blue-600">
+                        <i class="iconly-Delete icli text-2xl"></i>
+                        <span class="text-sm ml-2">Delete</span>
+                    </a>
+                    <a href="#" class="flex items-center text-gray-600 hover:text-blue-600">
+                        <i class="iconly-Arrow-Right-3 icli text-2xl"></i>
+                        <span class="text-sm ml-2">Send to portal</span>
+                    </a>
+                </div>
+            </label>
+        </div>
+        <!-- option end -->
+    </div>
+    <!-- client form card end-->
+</body>
